@@ -1,0 +1,11 @@
+<div class="card-container">
+  <button class="card card-small" (click)="captureimage()">
+    <span>CAPTURE IMAGE</span>
+  </button>
+</div><br>
+<img [src]="image" *ngIf="image" [style.width]="300">
+
+
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-buttons>
+            <ion-back-button defaultHref="/movhome"></ion-back-button>
+            <ion-title>{{lomov.mname}}</ion-title>
+        </ion-buttons>
+
+        <ion-buttons slot="primary">
+            <ion-button (click)="onDeleteBook()">
+                <ion-icon name="trash"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-img [src]="lomov.posterimage"></ion-img>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                        <h2 class="text-center"><b>{{lomov.mname}}</b></h2>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row><br>
+        <ion-row>
+            <ion-col>
+                <h3 class="text-center"><b>Actors :</b></h3>
+                <ion-card class="ion-padding">
+                    <ion-item *ngFor="let auw of lomov.actors">{{auw}}
+                    </ion-item>
+                </ion-card>
+                <h3 class="text-center"><b>Movie Shots :</b></h3>
+                <ion-card>
+                    <ion-img *ngFor="let aw of lomov.img1" [src]="aw"><br></ion-img>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

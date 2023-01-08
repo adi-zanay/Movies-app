@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>MOVIES</ion-title>
+  </ion-toolbar>
+  <ion-img src="https://static.vecteezy.com/system/resources/previews/002/283/659/large_2x/cinema-theater-frame-retro-illustrations-vector.jpg"></ion-img>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header><h2 class="text-center"><b>Movies Today</b></h2></ion-card-header>
+  </ion-card>
+
+  <div class="ion-padding">
+  <ion-item *ngFor="let mmoi of mov" [routerLink]="['./',mmoi.mid]">
+      <ion-avatar slot="start"><ion-img [src]="mmoi.posterimage"></ion-img></ion-avatar>
+            <ion-label><b>{{mmoi.mname}}</b></ion-label>
+  </ion-item></div>
+</ion-content>
